@@ -24,7 +24,8 @@ New Developer spin-up, on-boarding:
 We believe that our SDLC should be conceptually independent of our cloud provider, but we fully embrace that in practice our SDLC will be tightly coupled to our cloud provider. We will highlight areas that are bonus wins that end up being de-coupled from our cloud provider (e.g. Stackdriver for logging across GCP and AWS).
 
 SDLC Concepts:
- - coming soon...
+ - Containers. Goal: when possible use the same container in local, dev/stage, and prod for consistency across all environments.
+ - Git Flow. Goal: align to Git Flow across all repos, CI/CD pipelines, etc.
  
 SDLC on GCP:
  - coming soon...
