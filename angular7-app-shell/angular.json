@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "app-layout": {
+      "root": "projects/app-layout",
+      "sourceRoot": "projects/app-layout/src",
+      "projectType": "library",
+      "prefix": "gofa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/app-layout/tsconfig.lib.json",
+            "project": "projects/app-layout/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/app-layout/src/test.ts",
+            "tsConfig": "projects/app-layout/tsconfig.spec.json",
+            "karmaConfig": "projects/app-layout/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/app-layout/tsconfig.lib.json",
+              "projects/app-layout/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular7-app-shell"

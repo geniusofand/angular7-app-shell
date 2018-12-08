@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppLayoutModule } from 'app-layout';
+
 import { Angular7AppShellRoutingModule } from './angular7-app-shell-routing.module';
 import { Angular7AppShellComponent } from './angular7-app-shell.component';
-import { AppLayoutModule } from './app-layout/app-layout.module';
 
 @NgModule({
   declarations: [

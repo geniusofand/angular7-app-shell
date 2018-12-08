@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "app-layout": [
+        "dist/app-layout"
+      ],
+      "app-layout/*": [
+        "dist/app-layout/*"
+      ]
+    }
   }
 }
