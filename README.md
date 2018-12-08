@@ -15,6 +15,12 @@ New Developer spin-up, on-boarding:
 Opinionated Ecosystem:
  - Angular CLI
  - NgRX
+ - Required `@angular7-app-shell` packages for your app:
+   - `@angular7-app-shell/app-layout` (includes things like NgRX Nav and Routing services)
+   - `@angular7-app-shell/login`
+   - `@angular7-app-shell/authentication`
+   - `@angular7-app-shell/connectors` (RestConnectorAbstract, CloudfirestoreConnectorAbstract, etc.)
+   - `@angular7-app-shell/logging`
  - more to come...
 
 ## Designer Experience
