@@ -11,6 +11,11 @@ New Developer spin-up, on-boarding:
  - How:
    - Docker for local development, fast CI/CD pipelines, and consistent PROD runtimes.
    - Other?
+   
+Opinionated Ecosystem:
+ - Angular CLI
+ - NgRX
+ - more to come...
 
 ## Designer Experience
 
