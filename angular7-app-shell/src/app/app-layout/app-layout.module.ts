@@ -2,9 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { AppLayoutComponent } from './components';
-
-const routedComponents: any[] = [AppLayoutComponent];
+import { AppLayoutRoutingModule, routedComponents } from './app-layout-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +12,7 @@ const routedComponents: any[] = [AppLayoutComponent];
     routedComponents,
   ],
   imports: [
+    AppLayoutRoutingModule,
     CommonModule,
     RouterModule,
   ]

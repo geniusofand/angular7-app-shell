@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppLayoutComponent } from './components/app-layout/app-layout.component';
+import { AppLayoutComponent } from 'app-layout';
+
 import { AppRoute } from './constants/app-route.enum';
 
 // each application will override these routes specific to the application
