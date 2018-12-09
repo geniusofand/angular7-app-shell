@@ -21,6 +21,7 @@ Opinionated Ecosystem:
    - `@angular7-app-shell/authentication`
    - `@angular7-app-shell/connectors` (RestConnectorAbstract, CloudfirestoreConnectorAbstract, etc.)
    - `@angular7-app-shell/logging`
+   - `@angular7-app-shell/trace-log` (trace log for all ngrx Actions)
  - more to come...
 
 ## Designer Experience
