@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:app-layout": "ng build app-layout",
+    "build:trace-log": "ng build trace-log",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -20,6 +21,9 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
+    "@ngrx/effects": "^6.1.2",
+    "@ngrx/router-store": "^6.1.2",
+    "@ngrx/store": "^6.1.2",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",

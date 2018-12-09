@@ -168,6 +168,76 @@
           }
         }
       }
+    },
+    "router": {
+      "root": "projects/router",
+      "sourceRoot": "projects/router/src",
+      "projectType": "library",
+      "prefix": "gofa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/router/tsconfig.lib.json",
+            "project": "projects/router/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/router/src/test.ts",
+            "tsConfig": "projects/router/tsconfig.spec.json",
+            "karmaConfig": "projects/router/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/router/tsconfig.lib.json",
+              "projects/router/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "trace-log": {
+      "root": "projects/trace-log",
+      "sourceRoot": "projects/trace-log/src",
+      "projectType": "library",
+      "prefix": "gofa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/trace-log/tsconfig.lib.json",
+            "project": "projects/trace-log/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/trace-log/src/test.ts",
+            "tsConfig": "projects/trace-log/tsconfig.spec.json",
+            "karmaConfig": "projects/trace-log/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/trace-log/tsconfig.lib.json",
+              "projects/trace-log/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular7-app-shell"

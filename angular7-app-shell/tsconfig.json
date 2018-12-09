@@ -24,6 +24,18 @@
       ],
       "app-layout/*": [
         "dist/app-layout/*"
+      ],
+      "router": [
+        "dist/router"
+      ],
+      "router/*": [
+        "dist/router/*"
+      ],
+      "trace-log": [
+        "dist/trace-log"
+      ],
+      "trace-log/*": [
+        "dist/trace-log/*"
       ]
     }
   }
