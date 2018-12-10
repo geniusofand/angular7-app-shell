@@ -1,18 +1,6 @@
 import { ActionReducer } from '@ngrx/store';
 
-// import { AppStateInterface } from 'app/core/app-config/state/models/app-state.interface';
-export interface AppStateInterface {
-  // error: ErrorStateInterface;
-  // router: RouterReducerState<RouterStateUrlInterface>;
-  // survey: SurveyStateInterface;
-  // auth: AuthStateInterface;
-  // user: UserStateInterface;
-  // task: TaskStateInterface;
-  // navItems: NavItemsStateInterface;
-  // managementOverview: ManagementOverviewStateInterface;
-  // recommendation: RecommendationStateInterface;
-  booleanToggle: boolean;
-}
+import { AppStateInterface } from '@geniusofand/oss-app-state';
 
 export function traceLogReducer(reducer: ActionReducer<AppStateInterface>): ActionReducer<AppStateInterface> {
   return function (state: AppStateInterface, action: any): AppStateInterface {
