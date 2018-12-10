@@ -1,0 +1,35 @@
+/*
+@import '~assets/styles/_variables';
+@import '~assets/styles/_mixins';
+
+// Footer bottom bar
+.fixed-footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: $global-fixed-header-offset;
+  padding-right: $global-fixed-header-offset;
+  height: $global-fixed-footer-height;
+  background: $color-secondary-dark-blue;
+  opacity: 0;
+  z-index: $z-index-low;
+  animation: animateInBottom .5s ease-in-out forwards .5s;
+  .inner-content {
+    width: 100%;
+    .menu-more {
+      margin: 0 $margin-m 3.5rem 0
+    }
+  }
+}
+
+// Animations
+@keyframes animateInBottom {
+  from {
+    transform: translateY(6rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+*/

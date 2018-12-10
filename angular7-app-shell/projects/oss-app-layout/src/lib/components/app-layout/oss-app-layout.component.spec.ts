@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppLayoutComponent } from './app-layout.component';
+import { OssAppLayoutComponent } from './oss-app-layout.component';
 
-describe('AppLayoutComponent', () => {
-  let component: AppLayoutComponent;
-  let fixture: ComponentFixture<AppLayoutComponent>;
+describe('OssAppLayoutComponent', () => {
+  let component: OssAppLayoutComponent;
+  let fixture: ComponentFixture<OssAppLayoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppLayoutComponent ]
+      declarations: [ OssAppLayoutComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppLayoutComponent);
+    fixture = TestBed.createComponent(OssAppLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

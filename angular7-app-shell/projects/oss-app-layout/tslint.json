@@ -4,13 +4,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "gofa",
+      "gofa-oss",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "gofa",
+      "gofa-oss",
       "kebab-case"
     ]
   }
