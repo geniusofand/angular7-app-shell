@@ -36,6 +36,12 @@
       ],
       "trace-log/*": [
         "dist/trace-log/*"
+      ],
+      "oss-app-state": [
+        "dist/oss-app-state"
+      ],
+      "oss-app-state/*": [
+        "dist/oss-app-state/*"
       ]
     }
   }

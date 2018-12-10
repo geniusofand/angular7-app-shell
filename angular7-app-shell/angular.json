@@ -238,6 +238,41 @@
           }
         }
       }
+    },
+    "oss-app-state": {
+      "root": "projects/oss-app-state",
+      "sourceRoot": "projects/oss-app-state/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/oss-app-state/tsconfig.lib.json",
+            "project": "projects/oss-app-state/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/oss-app-state/src/test.ts",
+            "tsConfig": "projects/oss-app-state/tsconfig.spec.json",
+            "karmaConfig": "projects/oss-app-state/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/oss-app-state/tsconfig.lib.json",
+              "projects/oss-app-state/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular7-app-shell"
