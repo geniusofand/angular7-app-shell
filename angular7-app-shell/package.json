@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:app-layout": "ng build app-layout",
+    "build:oss-app-layout": "ng build oss-app-layout",
     "build:trace-log": "ng build trace-log",
     "test": "ng test",
     "lint": "ng lint",

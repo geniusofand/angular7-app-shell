@@ -11,6 +11,8 @@ export enum AppRoute {
   logout              = 'logout',
 
   // User routes
+  user                = 'user',
+  dashboard           = 'dashboard',
   users               = 'users',
   accountOverview     = 'users/account-overview',
   systemUsers         = 'users/system-users',

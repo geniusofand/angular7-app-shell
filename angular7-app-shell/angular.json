@@ -134,33 +134,33 @@
         }
       }
     },
-    "app-layout": {
-      "root": "projects/app-layout",
-      "sourceRoot": "projects/app-layout/src",
+    "oss-app-layout": {
+      "root": "projects/oss-app-layout",
+      "sourceRoot": "projects/oss-app-layout/src",
       "projectType": "library",
-      "prefix": "gofa",
+      "prefix": "gofa-oss",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/app-layout/tsconfig.lib.json",
-            "project": "projects/app-layout/ng-package.json"
+            "tsConfig": "projects/oss-app-layout/tsconfig.lib.json",
+            "project": "projects/oss-app-layout/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/app-layout/src/test.ts",
-            "tsConfig": "projects/app-layout/tsconfig.spec.json",
-            "karmaConfig": "projects/app-layout/karma.conf.js"
+            "main": "projects/oss-app-layout/src/test.ts",
+            "tsConfig": "projects/oss-app-layout/tsconfig.spec.json",
+            "karmaConfig": "projects/oss-app-layout/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/app-layout/tsconfig.lib.json",
-              "projects/app-layout/tsconfig.spec.json"
+              "projects/oss-app-layout/tsconfig.lib.json",
+              "projects/oss-app-layout/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

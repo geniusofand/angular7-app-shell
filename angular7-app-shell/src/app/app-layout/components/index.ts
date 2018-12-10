@@ -1,2 +1,1 @@
-export * from './app-layout/oss-app-layout.component';
-export * from './footer/oss-footer.component';
+export * from './app-root/app-root.component';
