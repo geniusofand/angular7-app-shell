@@ -1,12 +1,32 @@
-<a routerLink="/user/my-account" routerLinkActive="active" [attr.tabindex]="0" class="nav-item">
-  <span class="label">My Profile</span>
-</a>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over" class="sidenav">
 
-<!--
-<router-outlet name="grid-layout-main-body"></router-outlet>
--->
-<router-outlet></router-outlet>
+    <header class="heading container-fluid">
+      <div class="row end-xs">
+        <div class="col-xs-4">
+          <button type="button" class="close-button" (click)="sidenav.close()">
+            <span class="material-icons">keyboard_arrow_left</span><span class="text">Close</span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-<gofa-oss-footer></gofa-oss-footer>
+    <!--
+    <router-outlet name="oss-app-layout-sidenav"></router-outlet>
+    -->
 
-Testing post-footer content
+    <a routerLink="/user/my-account" routerLinkActive="active" [attr.tabindex]="0" class="nav-item">
+      <span class="label">My Profile</span>
+    </a>
+
+  </mat-sidenav>
+  <!-- the "main" app content -->
+  <mat-sidenav-content>
+    <gofa-oss-top-nav (onSidenavOpenClick)="sidenav.open()"></gofa-oss-top-nav>
+
+    <!--
+    <router-outlet name="oss-app-layout-main-body"></router-outlet>
+    -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

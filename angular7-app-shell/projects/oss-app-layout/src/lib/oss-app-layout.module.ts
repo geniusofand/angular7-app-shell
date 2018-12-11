@@ -1,25 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { MatButtonModule, MatSidenavModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 
-import { OssAppLayoutComponent, OssFooterComponent } from './components';
-
-const routedComponents: any[] = [
-  OssAppLayoutComponent,
-  OssFooterComponent
-];
+import { OssAppLayoutComponent, OssTopNavComponent } from './components';
 
 @NgModule({
   declarations: [
     OssAppLayoutComponent,
-    OssFooterComponent
+    OssTopNavComponent
   ],
   exports: [
-    OssAppLayoutComponent,
-    OssFooterComponent
+    OssAppLayoutComponent
   ],
   imports: [
     CommonModule,
+    MatButtonModule,
+    MatSidenavModule,
     RouterModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
