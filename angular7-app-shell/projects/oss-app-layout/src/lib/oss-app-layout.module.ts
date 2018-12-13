@@ -11,7 +11,8 @@ import { OssAppLayoutComponent, OssTopNavComponent } from './components';
     OssTopNavComponent
   ],
   exports: [
-    OssAppLayoutComponent
+    OssAppLayoutComponent,
+    OssTopNavComponent
   ],
   imports: [
     CommonModule,

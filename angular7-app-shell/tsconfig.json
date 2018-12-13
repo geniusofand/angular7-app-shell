@@ -19,11 +19,17 @@
       "dom"
     ],
     "paths": {
-      "app-layout": [
-        "dist/app-layout"
+      "oss-app-layout": [
+        "dist/oss-app-layout"
       ],
-      "app-layout/*": [
-        "dist/app-layout/*"
+      "oss-app-layout/*": [
+        "dist/oss-app-layout/*"
+      ],
+      "oss-app-state": [
+        "dist/oss-app-state"
+      ],
+      "oss-app-state/*": [
+        "dist/oss-app-state/*"
       ],
       "router": [
         "dist/router"
@@ -36,12 +42,6 @@
       ],
       "trace-log/*": [
         "dist/trace-log/*"
-      ],
-      "oss-app-state": [
-        "dist/oss-app-state"
-      ],
-      "oss-app-state/*": [
-        "dist/oss-app-state/*"
       ]
     }
   }

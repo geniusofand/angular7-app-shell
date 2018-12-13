@@ -138,7 +138,7 @@
       "root": "projects/oss-app-layout",
       "sourceRoot": "projects/oss-app-layout/src",
       "projectType": "library",
-      "prefix": "gofa-oss",
+      "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

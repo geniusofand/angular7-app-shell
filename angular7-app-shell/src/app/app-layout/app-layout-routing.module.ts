@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// import { OssAppLayoutComponent } from 'oss-app-layout';
-import { OssAppLayoutComponent } from "../../../projects/oss-app-layout/src/lib/components";
-
 import { AppRoute } from './constants/app-route.enum';
 
-// each application will override these routes specific to the application
+// each lazy loaded NgModule will define their own specific routes
 export const routes: Routes = [
   {
     path: '', children: [
@@ -29,8 +26,6 @@ export const routes: Routes = [
     ],
   },
 ];
-
-export const routedComponents: any[] = [OssAppLayoutComponent];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
