@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
+import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
 import { ActionReducerMap, MetaReducer, State, StoreModule } from '@ngrx/store';
 
@@ -32,6 +33,10 @@ export const metaReducers: MetaReducer<any>[] = [traceLogReducer];
     AppRootComponent
   ],
   imports: [
+    // ngrx related Modules need to be first. Order matters.
+    StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([]), // this is required even though our Effects are defined within other ngModules
+    StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule, // Browser, BrowserAnimations and Common must be first. Everything else is in alphabetical order.
@@ -39,11 +44,8 @@ export const metaReducers: MetaReducer<any>[] = [traceLogReducer];
     MatButtonModule,
     OssAppLayoutModule,
     RouterModule,
-    StoreModule.forRoot(reducers, { metaReducers }),
-    StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
     TraceLogModule,
   ],
-  providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppRootComponent]
 })

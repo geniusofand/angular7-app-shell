@@ -1,0 +1,84 @@
+/*
+@import '~assets/scss/index.scss';
+
+/deep/ .mat-dialog-container .mat-dialog-content {
+    padding-bottom: 0!important;
+}
+
+.copy-container {
+    min-height: 33.5rem;
+    .copy {
+        margin-bottom: 5rem;
+        h2, p { color: $font-color-reversed; }
+    }
+}
+.section {
+    margin-top: -1rem;
+    position: relative;
+}
+.section-1 {
+    background: url(../../../../assets/img/components/learning-sections/food-how-it-works/bg-section-1.jpg) left top no-repeat;
+    background-size: cover;
+}
+.section-2 {
+    background: url(../../../../assets/img/components/learning-sections/food-how-it-works/bg-section-2.jpg) left -5px no-repeat;
+    background-size: cover;
+}
+.section-3 {
+    background: url(../../../../assets/img/components/learning-sections/food-how-it-works/bg-section-3.jpg) left -5px no-repeat;
+    background-size: cover;
+}
+.section-my-pantry {
+    background: url(../../../../assets/img/components/learning-sections/food-how-it-works/bg-section-my-pantry.jpg) left -5px no-repeat;
+    background-size: cover;
+}
+.section-4 {
+    background: url(../../../../assets/img/components/learning-sections/food-how-it-works/bg-section-4.jpg) left -5px no-repeat;
+    background-size: cover;
+}
+.section-5 {
+    background: url(../../../../assets/img/components/learning-sections/food-how-it-works/bg-section-5.jpg) left 0 no-repeat;
+    background-size: cover;
+    img { width: 9rem; }
+    .copy-container .copy { margin-bottom: $margin-l; }
+}
+.genius-tip {
+    opacity: 0;
+    margin-right: 1.5rem;
+    text-align: left;
+    position: absolute;
+    padding: $padding-m $padding-m 1.2rem;
+    background: $color-gray-1;
+    @include border-radius(10px);
+    animation: animateIn .5s 1s ease-in-out forwards;
+    z-index: $z-index-1;
+    .avatar img {
+        display: block;
+        width: 2.5rem;
+        height: auto;
+        margin: 0 auto;
+        @include circle;
+    }
+    .copy {
+        p {
+            margin-top: 0;
+            color: $headings-font-color;
+        }
+    }
+    &:after {
+        @include arrow(up, 1rem, $color-gray-1);
+        position: absolute;
+        top: -1rem;
+    }
+    @keyframes animateIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+            margin-top: -3rem;
+        }
+    }
+}
+*/
+

@@ -3,4 +3,5 @@
  */
 
 export * from './lib/app-state.interface';
+export * from './lib/oss-app-layout-state.model';
 export * from './lib/oss-app-state.module';

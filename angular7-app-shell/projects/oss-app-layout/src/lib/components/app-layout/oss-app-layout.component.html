@@ -15,14 +15,23 @@
     <router-outlet name="oss-app-layout-sidenav"></router-outlet>
     -->
 
-    <a routerLink="/user/my-account" routerLinkActive="active" [attr.tabindex]="0" class="nav-item">
+    <!-- TODO - make this a combination of defaults from this AppShell + allow consuming apps to append to the list -->
+    <a routerLink="/user/my-account"
+       routerLinkActive="active"
+       (click)="sidenav.close()"
+       [attr.tabindex]="0"
+       class="nav-item">
       <span class="label">My Profile</span>
     </a>
 
   </mat-sidenav>
   <!-- the "main" app content -->
+  <!-- authService.isLoggedIn() -->
   <mat-sidenav-content>
-    <gofa-oss-top-nav (onSidenavOpenClick)="sidenav.open()"></gofa-oss-top-nav>
+    <gofa-oss-top-nav
+      [isLoggedIn]="true"
+      (onSidenavOpenClick)="sidenav.open()">
+    </gofa-oss-top-nav>
 
     <!--
     <router-outlet name="oss-app-layout-main-body"></router-outlet>
