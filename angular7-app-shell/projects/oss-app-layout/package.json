@@ -1,6 +1,6 @@
 {
   "name": "@geniusofand/oss-app-layout",
-  "version": "1.3.3",
+  "version": "1.4.0",
   "peerDependencies": {
     "@angular/animations": "^7.1.2",
     "@angular/cdk": "^7.1.1",

@@ -29,7 +29,6 @@ export class AppLayoutEffects {
             componentClass = FoodHowItWorksComponent;
             break;
         }
-        console.info(`in AppLayoutEffects.openDialog$ launching Dialog ${componentClass}...`);
         const dialogRef = this.dialog.open(componentClass, {
           data: action.payload,
         });
