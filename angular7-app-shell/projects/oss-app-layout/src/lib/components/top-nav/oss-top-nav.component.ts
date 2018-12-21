@@ -3,7 +3,6 @@ import { AppStateInterface } from '@geniusofand/oss-app-state';
 import { Store } from '@ngrx/store';
 
 import { DialogOpen } from '../../state/actions';
-import { OssFoodHowItWorksComponent } from '..';
 
 @Component({
   selector: 'gofa-oss-top-nav',
@@ -23,8 +22,9 @@ export class OssTopNavComponent implements OnInit {
   ngOnInit() {
   }
 
-  openDialogFoodHowItWorks(): void {
-    this.store.dispatch(new DialogOpen(OssFoodHowItWorksComponent));
+  openDialogHowItWorks(): void {
+    // the consuming App's Effects service will parse the .originatedFrom and manage the Dialog + Component accordingly.
+    this.store.dispatch(new DialogOpen('OssTopNavComponent.HowItWorks'));
   }
 
   sidenavOpenClicked(): void {

@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OssTopNavComponent } from './oss-top-nav.component';
 
-describe('OssTopNavComponent', () => {
+describe('TopNavComponent', () => {
   let component: OssTopNavComponent;
   let fixture: ComponentFixture<OssTopNavComponent>;
 

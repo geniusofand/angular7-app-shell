@@ -11,7 +11,7 @@ export class DialogClose implements Action {
 export class DialogOpen implements Action {
   public readonly type: OssAppLayoutActionType = OssAppLayoutActionType.DialogOpen;
 
-  constructor(public readonly dialogComponentClass: any, public readonly payload?: any) { }
+  constructor(public readonly originatedFrom: any, public readonly payload?: any) { }
 }
 
 export class DialogSuccess implements Action {
