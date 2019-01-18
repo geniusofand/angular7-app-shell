@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { OssAppRoute } from 'oss-app-layout';
+
 import { AppRoute } from './constants/app-route.enum';
 
 // each lazy loaded NgModule will define their own specific routes
@@ -11,18 +13,17 @@ export const routes: Routes = [
       //////////////////////////////////
       // Global routes
       //////////////////////////////////
-      { path: AppRoute.home, redirectTo: AppRoute.user, pathMatch: 'full' },
+      { path: OssAppRoute.default, redirectTo: OssAppRoute.user, pathMatch: 'full' },
 
       //////////////////////////////////
-      // Dashboard routes
+      // User routes
       //////////////////////////////////
-      // outlet: 'grid-layout-main-body'
-      { path: AppRoute.user, loadChildren: '../user/user.module#UserModule' },
+      { path: OssAppRoute.user, loadChildren: '../user/user.module#UserModule' },
 
       //////////////////////////////////
-      // Users routes
+      // Food routes
       //////////////////////////////////
-      // { path: AppRoute.users, loadChildren: 'app-users#UsersModule' },
+      { path: AppRoute.food, loadChildren: '../user/user.module#UserModule' },
     ],
   },
 ];

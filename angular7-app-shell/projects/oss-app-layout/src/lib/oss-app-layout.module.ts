@@ -5,19 +5,25 @@ import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
-import { OssAppLayoutComponent, OssTopNavComponent } from './components';
+import {
+  OssAppLayoutComponent,
+  OssHeaderSecondaryNavComponent,
+  OssSidenavPrimaryNavComponent,
+} from './components';
 import { OssAppLayoutEffects } from './state/oss-app-layout-effects.service';
-
 import { ossAppLayoutReducer } from './state/oss-app-layout.reducer';
+import { NavItemsService } from './services/nav-items/nav-items.service';
 
 @NgModule({
   declarations: [
     OssAppLayoutComponent,
-    OssTopNavComponent
+    OssHeaderSecondaryNavComponent,
+    OssSidenavPrimaryNavComponent,
   ],
   exports: [
     OssAppLayoutComponent,
-    OssTopNavComponent
+    OssHeaderSecondaryNavComponent,
+    OssSidenavPrimaryNavComponent,
   ],
   imports: [
     StoreModule.forFeature('ossAppLayout', ossAppLayoutReducer),
@@ -32,6 +38,7 @@ import { ossAppLayoutReducer } from './state/oss-app-layout.reducer';
   ],
   providers: [
     OssAppLayoutEffects,
+    NavItemsService,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

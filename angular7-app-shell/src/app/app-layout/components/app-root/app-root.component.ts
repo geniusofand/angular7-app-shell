@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AppStateInterface } from '@geniusofand/oss-app-state';
+import { Store } from '@ngrx/store';
+
+import { NavItemsLoad } from 'oss-app-layout';
 
 @Component({
   selector: 'gofa-app-root',
@@ -7,7 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppRootComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<AppStateInterface>) {
+    this.store.dispatch(new NavItemsLoad());
+  }
 
   ngOnInit() {
   }

@@ -27,7 +27,7 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
-    "@geniusofand/oss-app-state": "^1.2.0",
+    "@geniusofand/oss-app-state": "^1.4.3",
     "@ngrx/effects": "^6.1.2",
     "@ngrx/router-store": "^6.1.2",
     "@ngrx/store": "^6.1.2",

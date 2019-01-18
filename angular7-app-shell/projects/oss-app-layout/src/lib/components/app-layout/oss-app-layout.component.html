@@ -11,31 +11,22 @@
       </div>
     </header>
 
-    <!--
-    <router-outlet name="oss-app-layout-sidenav"></router-outlet>
-    -->
-
-    <!-- TODO - make this a combination of defaults from this AppShell + allow consuming apps to append to the list -->
-    <a routerLink="/user/my-account"
-       routerLinkActive="active"
-       (click)="sidenav.close()"
-       [attr.tabindex]="0"
-       class="nav-item">
-      <span class="label">My Profile</span>
-    </a>
+    <gofa-oss-sidenav-primary-nav
+      [navItems$]="primaryNavItems$"
+      (onSidenavPrimaryNavItemClick)="sidenav.close()"></gofa-oss-sidenav-primary-nav>
 
   </mat-sidenav>
   <!-- the "main" app content -->
-  <!-- authService.isLoggedIn() -->
   <mat-sidenav-content>
-    <gofa-oss-top-nav
+    <!-- authService.isLoggedIn() -->
+    <gofa-oss-header-secondary-nav
       [isLoggedIn]="true"
-      (onSidenavOpenClick)="sidenav.open()">
-    </gofa-oss-top-nav>
-
-    <!--
-    <router-outlet name="oss-app-layout-main-body"></router-outlet>
-    -->
-    <router-outlet></router-outlet>
+      [navItems$]="secondaryNavItems$"
+      (onSidenavOpenClick)="sidenav.open()"
+      (onOpenDialogHowItWorksClick)="openDialogHowItWorks()"></gofa-oss-header-secondary-nav>
+    <main class="page-view-content container-fluid">
+      <router-outlet></router-outlet>
+    </main>
+    <!-- <gofa-oss-footer> would go here if we need one -->
   </mat-sidenav-content>
 </mat-sidenav-container>

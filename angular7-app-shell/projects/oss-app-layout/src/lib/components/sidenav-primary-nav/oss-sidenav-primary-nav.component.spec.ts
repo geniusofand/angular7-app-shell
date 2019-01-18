@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OssTopNavComponent } from './oss-top-nav.component';
+import { OssSidenavPrimaryNavComponent } from './oss-sidenav-primary-nav.component';
 
 describe('TopNavComponent', () => {
-  let component: OssTopNavComponent;
-  let fixture: ComponentFixture<OssTopNavComponent>;
+  let component: OssSidenavPrimaryNavComponent;
+  let fixture: ComponentFixture<OssSidenavPrimaryNavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OssTopNavComponent ]
+      declarations: [ OssSidenavPrimaryNavComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OssTopNavComponent);
+    fixture = TestBed.createComponent(OssSidenavPrimaryNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

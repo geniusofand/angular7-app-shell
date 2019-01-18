@@ -12,7 +12,7 @@ import { MyAccountComponent } from './my-account/my-account.component';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
   ]
 })
 export class UserModule { }
