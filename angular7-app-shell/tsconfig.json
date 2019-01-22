@@ -42,6 +42,12 @@
       ],
       "trace-log/*": [
         "dist/trace-log/*"
+      ],
+      "oss-core": [
+        "dist/oss-core"
+      ],
+      "oss-core/*": [
+        "dist/oss-core/*"
       ]
     }
   }

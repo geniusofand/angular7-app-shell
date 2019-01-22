@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { NavItemPrimaryInterface, NavItemSecondaryInterface } from '@geniusofand/oss-app-state';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
@@ -11,6 +10,8 @@ import {
   NavItemsLoad, NavItemsLoadCompleted, NavItemsLoadFailed,
   OssAppLayoutActionType,
 } from 'oss-app-layout';
+import { NavItemPrimaryInterface, NavItemSecondaryInterface } from 'oss-core';
+
 
 import { FoodHowItWorksComponent } from '../components/food-how-it-works/food-how-it-works.component';
 import { FoodNavItem } from '../models';

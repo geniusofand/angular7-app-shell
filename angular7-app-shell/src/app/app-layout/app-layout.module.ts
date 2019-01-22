@@ -8,7 +8,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
 import { ActionReducerMap, MetaReducer, State, StoreModule } from '@ngrx/store';
 
-import { AppStateInterface  } from 'oss-app-state';
+import { OssCoreModule  } from 'oss-core';
 import { OssAppLayoutModule } from 'oss-app-layout';
 import { TraceLogModule, traceLogReducer } from 'trace-log';
 
@@ -55,6 +55,7 @@ export const metaReducers: MetaReducer<any>[] = [traceLogReducer];
     MatButtonModule,
     MatDialogModule,
     OssAppLayoutModule,
+    OssCoreModule,
     RouterModule,
     TraceLogModule,
   ],

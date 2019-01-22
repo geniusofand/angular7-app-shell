@@ -1,4 +1,4 @@
-import { NavCategoryId, NavItemPrimary, NavItemSecondary } from '@geniusofand/oss-app-state';
+import { NavCategoryId, NavItemPrimary, NavItemSecondary } from 'oss-core';
 
 import { AppRoute } from '../../constants/index';
 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AppStateInterface } from '@geniusofand/oss-app-state';
 import { Store } from '@ngrx/store';
 
 import { NavItemsLoad } from 'oss-app-layout';
+import { AppStateInterface } from 'oss-core';
 
 @Component({
   selector: 'gofa-app-root',
