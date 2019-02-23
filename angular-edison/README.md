@@ -1,3 +1,14 @@
+# angular-edison Brand Fingerprint
+The `angular-edison` brand defines the fingerprint: 
+ - Angular
+ - Angular Material
+ 
+## Version
+The current version for `angular-edison` is 7.0.0.
+Reference `package.json` for the specific version of Angular and Angular Material, but they are both 7.x major versions.
+
+# Origination
+
 # AngularEdison
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
