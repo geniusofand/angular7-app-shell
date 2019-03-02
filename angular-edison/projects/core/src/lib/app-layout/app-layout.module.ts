@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { MatButtonModule, MatIconModule, MatSidenavModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
@@ -23,6 +24,7 @@ import { CoreNavItemsService } from './services';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,

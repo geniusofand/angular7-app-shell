@@ -9,4 +9,6 @@ export * from './lib/app-layout/services/index';
 export * from './lib/app-layout/state/actions/index';
 export * from './lib/app-layout/app-layout.module';
 export * from './lib/app-state.interface';
+export * from './lib/logging/index';
+export * from './lib/runtime-config/index';
 
