@@ -2,6 +2,8 @@
 The `angular-edison` brand defines the fingerprint: 
  - Angular
  - Angular Material
+ - No Ngrx
+ - No Genius of And DS1 UI Components (just using Angular Material)
  
 ## Version
 The current version for `angular-edison` is 7.0.0.

@@ -1,0 +1,12 @@
+<div>
+  <a *ngFor="let item of navItems$ | async"
+     class="nav-item"
+     routerLink="{{ item.route === 'no-op' ? route.url : '/' + item.route }}"
+     routerLinkActive="{{ item.route === 'no-op' ? '' : 'active' }}"
+     (click)="sidenavPrimaryNavItemClicked()"
+     [attr.tabindex]="0" >
+
+    <!-- <img src="./assets/images/global/icons/nav/{{ item.categoryIcon }}" alt="{{ item.labelId }}" /> -->
+    <span class="label" [innerHTML]="item.labelId"></span>
+  </a>
+</div>

@@ -19,12 +19,26 @@
       "dom"
     ],
     "paths": {
+
+      // AS Hypothesis: In the root tsconfig file, everything points to src (not dist) to make the IDE happy.
       "core": [
-        "dist/core"
+        "projects/core/src/lib/*"
       ],
-      "core/*": [
-        "dist/core/*"
+      "@geniusofand/angular-edison-core": [
+        "projects/core/src"
+      ],
+
+      "docs/*": ["projects/demo-app/src/app/*"],
+      "docs-assets/*": ["projects/demo-app/src/assets/*"],
+
+      "core-js/es7/reflect": [
+        "../node_modules/core-js/proposals/reflect-metadata"
       ]
     }
-  }
+  },
+  "include": [
+    "projects/core/src/**/*",
+    "projects/demo-app/src/**/*",
+    "projects/demo-app-e2e/src/**/*",
+  ]
 }

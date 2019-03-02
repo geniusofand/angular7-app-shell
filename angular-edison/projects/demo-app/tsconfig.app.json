@@ -1,11 +1,22 @@
 {
   "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "outDir": "../../out-tsc/app",
-    "types": []
-  },
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts"
-  ]
+  "angularCompilerOptions": {
+    "strictMetadataEmit": false,
+    "paths": {
+
+      "core/*": [
+        "projects/core/src/lib/*"
+      ],
+      "@geniusofand/angular-edison-core": [
+        "projects/core/src"
+      ],
+
+      "demo-app/*": ["projects/demo-app/src/app/*"],
+      "demo-app-assets/*": ["projects/demo-app/src/assets/*"],
+
+      "core-js/es7/reflect": [
+        "../node_modules/core-js/proposals/reflect-metadata"
+      ]
+    }
+  }
 }

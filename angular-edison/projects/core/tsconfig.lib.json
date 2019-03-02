@@ -15,7 +15,18 @@
     "lib": [
       "dom",
       "es2018"
-    ]
+    ],
+    "paths": {
+
+      "core/*": ["projects/core/src/lib/*"],
+      "@geniusofand/angular-edison-core": [
+        "projects/core/src"
+      ],
+
+      "core-js/es7/reflect": [
+        "../node_modules/core-js/proposals/reflect-metadata"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
