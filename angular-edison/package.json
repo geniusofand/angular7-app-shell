@@ -22,7 +22,13 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@angular/fire": "^5.1.1",
+    "@geniusofand/angular-edison-person": "7.0.0-alpha.1",
+    "@geniusofand/calendar-service-angular-typescript": "^1.0.6",
+    "@geniusofand/date-time-gofa-angular-typescript": "^1.0.10",
     "core-js": "^2.5.4",
+    "firebase": "^5.8.5",
+    "firebaseui": "^3.5.2",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"

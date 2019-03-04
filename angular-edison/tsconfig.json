@@ -28,6 +28,10 @@
         "projects/core/src"
       ],
 
+      //"@geniusofand/angular-edison-person": [
+      //  "../../person/angular-edison/projects/person/src"
+      //],
+
       "docs/*": ["projects/demo-app/src/app/*"],
       "docs-assets/*": ["projects/demo-app/src/assets/*"],
 
@@ -40,5 +44,6 @@
     "projects/core/src/**/*",
     "projects/demo-app/src/**/*",
     "projects/demo-app-e2e/src/**/*",
+    //"../../person/angular-edison/projects/person/src/**/*"
   ]
 }

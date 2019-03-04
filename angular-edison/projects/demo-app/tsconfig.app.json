@@ -11,6 +11,10 @@
         "projects/core/src"
       ],
 
+      //"@geniusofand/angular-edison-person": [
+      //  "../../../../person/angular-edison/projects/person/src"
+      //],
+
       "demo-app/*": ["projects/demo-app/src/app/*"],
       "demo-app-assets/*": ["projects/demo-app/src/assets/*"],
 

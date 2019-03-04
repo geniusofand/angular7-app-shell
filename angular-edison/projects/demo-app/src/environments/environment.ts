@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  clientApplicationId: 'meal-plan-app_angular-material-ui_prod',
+  clientApplicationKey: 'blabalbalb',
+  firebaseConfig: {
+    apiKey: 'AIzaSyC_HuKo67tI-zbXt16uBrd3gNZ_YXSupPk',
+    authDomain: 'geniusofand.firebaseapp.com',
+    databaseURL: 'https://geniusofand.firebaseio.com',
+    projectId: 'geniusofand',
+    storageBucket: 'geniusofand.appspot.com',
+    messagingSenderId: '152535135790'
+  },
 };
 
 /*

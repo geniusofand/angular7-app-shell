@@ -23,6 +23,14 @@
     "test": "ng test demo-app"
   },
   "dependencies": {
-    "@geniusofand/angular-edison-core": "7.0.0-alpha.1"
+    "@angular/fire": "^5.1.1",
+    "@geniusofand/angular-edison-core": "7.0.0-alpha.1",
+    "@geniusofand/angular-edison-person": "7.0.0-alpha.1",
+    "@geniusofand/calendar-service-angular-typescript": "^1.0.6",
+    "@geniusofand/date-time-gofa-angular-typescript": "^1.0.10",
+    "flexboxgrid-sass": "^8.0.5",
+    "firebase": "^5.8.5",
+    "firebaseui": "^3.5.2",
+    "material-design-icons": "^3.0.1"
   }
 }

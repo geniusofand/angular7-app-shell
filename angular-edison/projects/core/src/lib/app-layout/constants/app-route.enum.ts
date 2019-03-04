@@ -7,6 +7,7 @@ export enum CoreAppRoute {
   notFound            = 'not-found',
 
   // Auth routes
+  authSuccessCallback = 'login/auth-callback',
   login               = 'login',
   logout              = 'logout',
 
@@ -18,5 +19,10 @@ export enum CoreAppRoute {
   // System
   noOp                = 'no-op',
   unitTest            = 'unit-test',
+
+  // Admin routes
+  adminAuthSuccessCallback = 'login-admin/auth-callback',
+  adminLogin          = 'login-admin',
+  selectPerson        = 'select-person',
 
 }

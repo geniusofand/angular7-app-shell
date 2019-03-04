@@ -4,7 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatDialogModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
-import { AppStateInterface, CoreAppLayoutModule } from '@geniusofand/angular-edison-core';
+import { AngularFireModule } from '@angular/fire';
+import { AppStateInterface, CoreAppLayoutModule, CoreAuthModule } from '@geniusofand/angular-edison-core';
+import { PersonModule } from '@geniusofand/angular-edison-person';
+
+import { environment } from '../../environments/environment';
 
 import { AppLayoutRoutingModule } from './app-layout-routing.module';
 import { AppRootComponent } from './components/app-root/app-root.component';
@@ -12,10 +16,6 @@ import { AppRootComponent } from './components/app-root/app-root.component';
 // reference: https://github.com/ng-packagr/ng-packagr/issues/734
 import { FoodHowItWorksComponent } from './components/food-how-it-works/food-how-it-works.component';
 import { NavItemsService } from './services';
-
-let environment = {
-  production: false,
-};
 
 @NgModule({
   declarations: [
@@ -33,10 +33,13 @@ let environment = {
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule, // Browser, BrowserAnimations and Common must be first. Everything else is in alphabetical order.
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
     AppLayoutRoutingModule,
     MatButtonModule,
     MatDialogModule,
     CoreAppLayoutModule,
+    CoreAuthModule,
+    PersonModule,
     RouterModule,
   ],
   providers: [

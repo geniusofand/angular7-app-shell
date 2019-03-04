@@ -1,3 +1,347 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~firebaseui/dist/firebaseui.css';
+@import '~material-design-icons/iconfont/material-icons.css';
+@import 'assets/scss/index.scss';
 
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html, body {
+    background-color: $color-light;
+    box-sizing: border-box;
+    height:100%;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
+html * {
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+// Flexbox-wrapper 
+.wrapper.desktop-bg-wrap {
+    background: $color-light; 
+}
+
+// Responsive Images
+img, .img, .figure, figure {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+// Loading Image
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: url('https://00e9e64bac62815b6d676d5282504c03b3d926b9dda13c4bd6-apidata.googleusercontent.com/download/storage/v1/b/meal-plan-app/o/genius-of-and-domain%2Fbg-loading@2x.jpg?qk=AD5uMEsEmcX59RNKg9NUtbwOdFhKGsAFKN-EwXcmpxsp0F_x6czSPBLcCwfgssW8UO3YEE4HNK0Ec9iNL0edohPGE6GuRvj14JQHStOxzD6wpCJDvjYfXGJVDqC6VMz6y7frO5A7KkNX6Nd1XB-QONTEDCeSxEF_Ea38hy4I1c64L-7gXSg4dkE-frHmEXqLEXb6xRiL-tNcTc-bhiD7qcqxWSeAEVZstO5WlC95HoO6X6zWLzoH37mBRokfAZo7K7de31Wlblc6L6PPNzX08XCOkvy10YLU5ZdOsORCg2ujyd6KBCmwhphHUUIj6-3OG2o001pqNOL4beoXMOiIGKvRs43y__RpdFazrkP2xlyGjFmZTqujGLLP14JjCZ7Lqr0y-NEcwVc2Ppb1AePGOIjKh8uwGveV4N5QE5CMp5Eo17bjnwKKHKB5ROUeyAo9ByIX8fwX29Ug3SnW2TvAWdfDkP8oR-qUFLJFccnPg_D_IAf6iJbeG_G-moAYLZmgM5lomlxCUbCwts0h4YJTlJUqfs_ZXZf6DNw3lfr2gaKjbo_egXy_AesQe6wRO32KSJ5PyUBRb9yyJMff4k8GvXN3gsNmceDypbSBDov9SLp7mtaDaEbIScP-2B8RrncPBJaG6uk6A8fy6qk60DjVdsOEQr402SbEOLVOGbQoyD51f1oCgh6AII86hyWLdl6s-ndagC_miT0a3KDR0qqaWUr6SjmnpcDEtkSVw6rKWCrJmgnYVNXsNvqRm26epgrQfR_piCN5t3rguCB5AOvv0_u70q9uF-zv8JhHfyueAKgmZmcw4dpyhF0') no-repeat; // assets/img/components/loading/bg-loading@2x.jpg
+  background-size: cover;
+}
+
+// Divider (mat-divider doesn't appear to be working)
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+// Shaded divider
+.shaded-divider {
+  margin: $margin-xl auto $margin-m;
+  max-width: 20rem;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    outline:none;
+}
+.tr-5 {
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+}
+.tr-3 {
+    -webkit-transition:0.3s;
+    -moz-transition:0.3s;
+    -ms-transition:0.3s;
+    -o-transition:0.3s;
+    transition:0.3s;
+}
+.hr {
+    display:block;
+    height:2px;
+}
+.hr.yellow { background-color:#f4f434; }
+.hr.gray { background-color:#eaeaea; }
+.seperator {
+    background-color:#f4f434;
+    margin-top:-6.5px;
+    position:absolute;
+    border-radius:20%;
+    right:-1.5px;
+    height:13px;
+    width:3px;
+    top:50%;
+}
+.mat-drawer-content { background: $color-light; }
+.mat-menu-content {
+    padding-top: $padding-m!important;
+    padding-bottom: $padding-m!important;
+}
+.mat-menu-item {
+    font-size: $font-size-normal!important;
+    font-weight: $font-weight-bold!important;
+    height: auto!important;
+    line-height: $base-line-height!important;
+    padding-bottom: $padding-s!important;
+    &:last-of-type { padding-bottom: 0!important; }
+    .material-icons {
+        font-size: $font-size-large;
+        position: relative;
+        top: .2rem;
+    }
+    .caption {
+        color: $font-color;
+        display: block;
+        font-weight: $font-weight-normal;
+    }
+}
+.mat-optgroup {
+    .mat-option {
+        height: 2rem;
+        line-height: 2;
+    }
+    .mat-option-text {
+        font-size: $font-size-small!important;
+        color: $font-color;
+    }
+}
+.mat-datepicker-content .mat-calendar {
+    height: 380px!important;
+    position: fixed;
+    background: $color-light;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include box-shadow();
+    @include border-radius();
+}
+// Material Dialogs
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+    background: #000;
+}
+.cdk-global-overlay-wrapper {
+    .cdk-overlay-pane {
+        width: 100%!important;
+        max-width: 100%!important;
+        height: 100%!important;
+        &.mat-snack-bar-handset {
+            height: auto!important;
+        }
+    }
+}
+.mat-dialog-container {
+    overflow-x: hidden!important;
+    padding:0 0 0 !important;
+    position:relative;
+    color: $font-color!important;
+    border-radius: 0!important;
+    margin:0 auto;
+    width: 100%!important;
+    height: 100%!important;
+    max-width:100% !important;
+    .mat-dialog-content {
+        height: 100vh!important;
+        max-height:none !important;
+        padding-bottom: $padding-xl!important;
+    }
+    .dialog-header {
+        background: $color-light;
+        border-bottom: $border-width $border-style $border-color;
+        position: relative;
+        &.no-border { border-bottom: none; }
+        .dialog-title {
+            text-align: center;
+            @extend .h2;
+            margin-top: $margin-xs;
+            &.text-left { text-align: left; }
+        }
+        .dialog-subtitle {
+            margin-top: 0;
+        }
+    }
+    .fixed-dialog-header {
+        transform: none;
+        position: fixed;
+        width: 100%;
+        top: -3rem;
+        padding-top: 3rem;
+        height: 6.4rem;
+        z-index: $z-index-2;
+        border-bottom: $border-width $border-style $border-color;
+        .back-button {
+            top: auto;
+            bottom: 0;
+        }
+
+    }
+    .fixed-dialog-header + .dialog-container,
+    .fixed-dialog-header + .mat-dialog-content {
+        padding-top: 3.3rem;
+        height: 100vh!important;
+    }
+    .back-button {
+        position:absolute;
+        overflow:hidden;
+        height:50px;
+        width:50px;
+        padding:0;
+        min-width: unset;
+        z-index: $z-index-2;
+        right:0;
+        top: 0;
+        &.reversed { color: $font-color-reversed; }
+        .mat-icon { margin: $padding-s 0; }
+    }
+}
+
+.mat-tab-labels .mat-tab-label {
+    min-width: auto;
+    &:last-of-type { max-width: 49%; }
+} 
+.mat-tab-body.mat-tab-body-active {
+    height: 100%;
+}
+.date-picker {
+    .mat-input-wrapper.mat-form-field-wrapper {
+        padding:0;
+        .mat-input-flex.mat-form-field-flex {
+            .mat-input-infix.mat-form-field-infix {
+                overflow:hidden;
+                display:block;
+                height:34px;
+                border:none;
+                padding:0;
+                .mat-input-placeholder-wrapper.mat-form-field-placeholder-wrapper { padding:0;top:0; }
+                input { display:block;height:100%; }
+            }
+        }
+        .mat-input-subscript-wrapper.mat-form-field-subscript-wrapper { display:none; }
+        .mat-input-underline.mat-form-field-underline {
+            background:none;
+            bottom:0;
+            .mat-input-ripple.mat-form-field-ripple { display:none; }
+        }
+    }
+}
+.mat-snack-bar-container {
+    border-radius: 0!important;
+    position: fixed;
+    bottom: 0;
+    width: 100%!important;
+    max-width: none!important;
+}
+.mat-spinner {
+    width: 3rem!important;
+    height: 3rem!important;
+    svg {
+      width: 3rem!important;
+      height: 3rem!important;
+    }
+    circle { stroke: $color-green-1!important; }
+  }
+.mat-expansion-panel {
+    .mat-expansion-panel-header-title {
+        color: $font-color-dark;
+    }
+    .mat-expansion-panel-body {
+        p, ol, ul {
+            color: $font-color;
+        }
+        .color-dark,
+        .headings-font-color { color: $font-color-dark; }
+    }
+}
+.mat-hint { color: $font-color!important; }
+.mat-card {
+    white-space: normal;
+    p { color: $font-color; }
+    .mat-card-image {
+        max-width: none;
+    }
+}
+.mat-progress-bar {
+    .mat-progress-bar-buffer {
+        background-color: $color-gray-1;
+        @include border-radius();
+    }
+    .mat-progress-bar-fill::after {
+        background-color: $color-green-1;
+    }
+}
+.grocery-tab .mat-tab-header, .grocery-tab .mat-tab-labels, .grocery-tab .mat-tab-labels .mat-tab-label {
+    line-height:56px;
+    font-size:17px;
+    height:60px;
+}
+.grocery-tab .mat-tab-body-wrapper {
+  height:calc(100% - 60px);
+}
+
+@media all and (min-width: $break-sm) {
+    // /deep/ .cdk-overlay-pane {
+    //     min-width: $flexboxgrid-max-width!important;
+    // }
+    .mat-dialog-container {
+        max-width: $flexboxgrid-max-width!important;
+        .fixed-dialog-header {
+            width: $flexboxgrid-max-width; // overriding 360px standard width for dialogs set in .ts file.
+            height: 3.4rem;
+            z-index: $z-index-2;
+            top: auto;
+            padding: initial;
+            border-bottom: $border-width $border-style $border-color;
+            &.no-border { border-bottom: none; }
+        }
+    }
+}
+@media all and (min-width: 320px) and (max-width: 720px) {
+    .grocery-tab .mat-tab-header, .grocery-tab .mat-tab-labels, .grocery-tab .mat-tab-labels .mat-tab-label {
+        line-height:46px;
+        height:50px;
+    }
+}
+// @media all and (min-width: 751px) {
+//     // Desktop overlay message
+//     body main .sidenav-container {
+//         > * { filter: blur(8px)!important;}
+//         &:before {
+//             content: '';
+//             background: rgba(0,0,0,.8);
+//             position: fixed;
+//             height: 100%;
+//             width: 100%;
+//             z-index: $z-index-5;
+//         }
+//         &:after {
+//             content: 'Genius of And is a mobile app. Please view on your mobile device.';
+//             position: fixed;
+//             z-index: $z-index-5;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-50%, -50%);
+//             color: $font-color-reversed;
+//             font-size: 2rem;
+//             text-align: center;
+//             line-height: 1.5;
+//         }
+//     }
+// }
