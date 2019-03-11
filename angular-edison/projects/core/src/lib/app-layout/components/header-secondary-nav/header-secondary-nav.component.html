@@ -1,0 +1,39 @@
+<div *ngIf="isLoggedIn" class="side-menu col-xs-2">
+  <span class="nav-button-burger" (click)="sidenavOpenClicked()">
+    Hamburger
+    <img src="assets/img/global/ico-hamburger.svg" alt="main navigation" class="main-nav-icon" />
+  </span>
+
+  <!-- How it works -->
+  <div class="end-xs col-xs-2">
+    <span class="nav-button-help" (click)="openDialogHowItWorks()">
+      <mat-icon>help_outline</mat-icon>
+    </span>
+  </div>
+</div>
+
+<!-- domain contextual bottom nav -->
+<div class="nav-content-bottom">
+  <nav mat-tab-nav-bar>
+    <div class="wrapper">
+
+      <a *ngFor="let item of navItems$ | async"
+         mat-tab-link class="nav-item"
+         routerLink="{{ item.route === 'no-op' ? route.url : '/' + item.route }}"
+         routerLinkActive="{{ item.route === 'no-op' ? '' : 'active' }}"
+         [attr.tabindex]="0" >
+
+        <!-- <img src="./assets/images/global/icons/nav/{{ item.categoryIcon }}" alt="{{ item.labelId }}" /> -->
+        <span class="label" [innerHTML]="item.labelId"></span>
+      </a>
+
+      <!--
+      <a mat-tab-link class="my-today" [routerLink]="['/food/my-today']" routerLinkActive #rla="routerLinkActive" active="rlaSafe && rla.isActive"><span>Today</span></a>
+      <a mat-tab-link class="my-meals" [routerLink]="['/food/my-meals']" routerLinkActive #rla="routerLinkActive" active="rlaSafe && rla.isActive"><span>My meals</span></a>
+      <a mat-tab-link class="my-recipes" [routerLink]="['/food/my-recipes']" routerLinkActive #rlab="routerLinkActive" active="rlaSafe && rlab.isActive"><span>My recipes</span></a>
+      <a mat-tab-link class="my-groceries" [routerLink]="['/food/my-groceries']" routerLinkActive #rlac="routerLinkActive" active="rlaSafe && rlac.isActive"><span>My groceries</span></a>
+      <a mat-tab-link class="my-pantry" [routerLink]="['/food/my-pantry']" routerLinkActive #rlad="routerLinkActive" active="rlaSafe && rlad.isActive"><span>My pantry</span></a>
+      -->
+    </div>
+  </nav>
+</div>

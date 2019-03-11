@@ -1,0 +1,207 @@
+@import 'vars';
+
+/* Setup */
+/*! Typebase.scss v0.1.0 | MIT License */
+html {
+    /* Change default typefaces here */
+    font-family: $font-family;
+    font-size: $base-font-size / 16 * 100%;
+    color: $font-color;
+    // Make everything look a little nicer in webkit
+    -webkit-font-smoothing: antialiased;
+
+}
+
+/* Copy & Lists */
+p {
+    line-height: $leading;
+    margin-bottom: 0;
+    &.subhead {
+        margin-top: .5rem;
+    }
+}
+
+// Links and buttons
+a, a:visited, a:link, a:active, .link {
+    cursor: pointer;
+    color: $link-color;
+    text-decoration: none;
+}
+
+.btn-primary * { // overwrite material TODO fix this.
+    color: $color-light;
+}
+.mat-raised-button {
+    box-shadow: none;
+}
+.btn-secondary {
+    @include btn-secondary();
+}
+.btn-error {
+    @include btn-error();
+}
+.btn-small {
+    line-height: 2!important; // overwrite .mat-raised-button styling
+}
+
+// Lists
+ul,
+ol {
+    margin-top: $leading;
+    margin-bottom: $leading;
+    li {
+        line-height: $leading;
+    }
+    ul,
+    ol {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+blockquote {
+    line-height: $leading;
+    margin-top: $leading;
+    margin-bottom: $leading;
+}
+
+/* Headings */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    /* Change heading typefaces here */
+    margin-top: $leading;
+    margin-bottom: 0;
+    line-height: $leading;
+    color: $headings-font-color;
+    display: block;
+    text-transform: lowercase;
+    font-weight: $font-weight-bold;
+    &::first-letter { text-transform: capitalize; }
+    &.capital-overwrite { text-transform: none; }
+}
+h1, .h1 {
+    font-size: 1.39 * $scale * 1rem; // 25px
+    line-height: 1.3 * $leading;
+}
+h2, .h2, h3, .h3 {
+    font-size: 1.11 * $scale * 1rem; // 20px
+    line-height: 1.3 * $leading;
+}
+h4, h5, h6, .h4, .h5, .h6  {
+    font-size: .89 * $scale * 1rem; // 16px
+}
+
+// Text decorations
+b, .bold, strong {
+    font-weight: $font-weight-bold;
+}
+b.extra-bold, .extra-bold {
+    font-weight: $font-weight-extra-bold;
+}
+i, .italic, em { font-style: italic; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+
+// Alert notifications
+.notification {
+    @include notification();
+}
+
+// margins
+.no-margin, .no-padding { @include no-margin-padding; }
+
+// Small font sizes
+.font-size-small, .caption {
+    font-size: $font-size-small; // 13px
+    line-height: .8 * $leading;
+}
+.font-size-extra-small, .disclaimer {
+    font-size: $font-size-extra-small; // 11 px
+    color: $font-color;
+}
+
+// Colors
+.font-color {
+    color: $font-color;
+}
+.color-dark, .headings-font-color, .font-color-dark {
+    color: $color-dark;
+}
+.color-light {
+    color: $color-light;
+}
+.mat-drawer-container { color: $font-color!important; }
+.color-success {
+    color: $color-success;
+}
+.color-error {
+    color: $color-red;
+}
+
+// Text dividers
+.vertical-text-divider {
+    color: $color-gray-1;
+}
+
+
+/* Tables */
+table {
+    margin-top: $leading;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+td,
+th {
+    padding: 0;
+    line-height: $base-line-height * $base-font-size - 0px;
+}
+
+/* Code blocks */
+code {
+    // Forces text to constrain to the line-height. Not ideal, but works.
+    vertical-align: bottom;
+}
+
+/* Leading paragraph text */
+.lead {
+    font-size: $scale * 1rem;
+}
+
+/* Hug a the block above you */
+.hug {
+    margin-top: 0;
+}
+
+/* Forms */
+.full-width-field {
+    @include full-width-field();
+}
+.form-field { margin-top: $margin-m; }
+
+// Material validation
+/deep/ .mat-form-field {
+    color: $headings-font-color!important;
+    .mat-icon-button {
+        color: $link-color;
+        &.btn-clear {
+            color: $font-color;
+        }
+    }
+}
+/deep/ .mat-button-toggle-group {
+    &[required] { margin-bottom: $margin-l; }
+    &.ng-invalid.ng-untouched {
+        overflow: visible;
+        &:after {
+            content: '*required';
+            font-size: $font-size-extra-small;
+            color: $color-error;
+            display: block;
+            position: absolute;
+            bottom: -1.75rem;
+        }
+    }
+}

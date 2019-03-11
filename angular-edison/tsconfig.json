@@ -1,0 +1,49 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+
+      // AS Hypothesis: In the root tsconfig file, everything points to src (not dist) to make the IDE happy.
+      "core": [
+        "projects/core/src/lib/*"
+      ],
+      "@geniusofand/angular-edison-core": [
+        "projects/core/src"
+      ],
+
+      //"@geniusofand/angular-edison-person": [
+      //  "../../person/angular-edison/projects/person/src"
+      //],
+
+      "docs/*": ["projects/demo-app/src/app/*"],
+      "docs-assets/*": ["projects/demo-app/src/assets/*"],
+
+      "core-js/es7/reflect": [
+        "../node_modules/core-js/proposals/reflect-metadata"
+      ]
+    }
+  },
+  "include": [
+    "projects/core/src/**/*",
+    "projects/demo-app/src/**/*",
+    "projects/demo-app-e2e/src/**/*",
+    //"../../person/angular-edison/projects/person/src/**/*"
+  ]
+}

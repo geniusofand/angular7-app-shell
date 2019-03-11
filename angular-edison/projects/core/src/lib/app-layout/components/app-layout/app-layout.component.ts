@@ -1,18 +1,20 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { AppStateInterface, NavCategoryId, NavItemPrimaryInterface, NavItemSecondaryInterface } from '@geniusofand/oss-app-state';
-import { Store } from '@ngrx/store';
 import { BehaviorSubject, Subject} from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
 
-import { NavItemsService } from '../../services/nav-items/nav-items.service';
+import { AppStateInterface } from '../../../app-state.interface';
+import {
+  NavCategoryId, NavItemPrimaryInterface, NavItemSecondaryInterface
+} from '../../models';
+import { CoreNavItemsService } from '../../services';
 import { DialogOpen } from '../../state/actions';
 
 @Component({
-  selector: 'gofa-oss-app-layout',
-  templateUrl: './oss-app-layout.component.html',
-  styleUrls: ['./oss-app-layout.component.scss']
+  selector: 'core-app-layout',
+  templateUrl: './app-layout.component.html',
+  styleUrls: ['./app-layout.component.scss']
 })
-export class OssAppLayoutComponent implements OnInit, OnDestroy {
+export class CoreAppLayoutComponent implements OnInit, OnDestroy {
 
   // This is our "1 smart parent component" that is aware of State via ngrx. All other
   // components are "dumb components" and simply use @Input() and @Output() patterns
@@ -24,22 +26,13 @@ export class OssAppLayoutComponent implements OnInit, OnDestroy {
 
   private readonly destroy$: Subject<boolean> = new Subject<boolean>();
 
-  constructor(
-    private readonly _navItemsService: NavItemsService,
-    private store: Store<AppStateInterface>) {
-    this.currentCategoryId$ = new BehaviorSubject<NavCategoryId>(undefined);
+  constructor(private readonly _navItemsService: CoreNavItemsService) {
+    this.selectedNavCategoryId$ = new BehaviorSubject<NavCategoryId>(undefined);
     this.primaryNavItems$ = new BehaviorSubject<NavItemPrimaryInterface[]>(undefined);
     this.secondaryNavItems$ = new BehaviorSubject<NavItemSecondaryInterface[]>(undefined);
   }
 
   public ngOnInit(): void {
-    // const cultureCookie: string = this._cookieService.get('Culture');
-    // this._translateService.setDefaultLang(cultureCookie);
-    // this._translateService.use(cultureCookie)
-    //   .pipe(take(1))
-    //   .subscribe(() => {
-    //     this.languageSet$.next(true);
-    //   });
 
     // Get the logged in user from the token
     // this._authService.getLoggedInUser()
@@ -62,10 +55,11 @@ export class OssAppLayoutComponent implements OnInit, OnDestroy {
     //   });
 
     // Listen for changes to primary navigation items to trigger render.
-    this._navItemsService.getPrimaryNavItems()
+    this._navItemsService.primaryNavItems$
       .pipe(
         takeUntil(this.destroy$))
       .subscribe((primaryNavItems: NavItemPrimaryInterface[]) => {
+        console.info('primaryNavItems: ', JSON.stringify(primaryNavItems));
         const route: string = this._navItemsService.determinePrimaryNavAppRoute(this._navItemsService.getPath());
         this.updateCurrentCategoryId(primaryNavItems, route);
         this.primaryNavItems$.next(primaryNavItems);
@@ -82,7 +76,7 @@ export class OssAppLayoutComponent implements OnInit, OnDestroy {
 
   openDialogHowItWorks(): void {
     // the consuming App's Effects service will parse the .originatedFrom and manage the Dialog + Component accordingly.
-    this.store.dispatch(new DialogOpen('OssSidenavPrimaryNavComponent.HowItWorks'));
+    // this.store.dispatch(new DialogOpen('OssSidenavPrimaryNavComponent.HowItWorks'));
   }
 
   /**
@@ -106,7 +100,7 @@ export class OssAppLayoutComponent implements OnInit, OnDestroy {
   }
 
   private updateSecondaryNavItems(currentCategoryId: NavCategoryId): void {
-    this._navItemsService.getSecondaryNavItems()
+    this._navItemsService.secondaryNavItems$
       .pipe(take(1))
       .subscribe((secondaryNavItems: { [categoryId: string]: NavItemSecondaryInterface[] }) => {
         if (!secondaryNavItems) {

@@ -1,0 +1,119 @@
+/*! Global Vars */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+
+
+// Colors
+$color-purple-1: #EDEAF6; // Light purple
+$color-purple-2: #8981C7; // Dark purple
+$color-purple-3: rgb(102, 61, 169); // Dark purple
+$color-blue-1: #4A90E2; // Blue
+$color-green-1: #7ED321; // Green
+$color-red: #D0021B; // Error red
+$color-orange: #F5A623; // Caution orange
+
+// Grays
+$color-light: #fff;
+$color-dark: #4A4A4A; // Dark gray
+$color-gray-1: #EAEAEA; 
+$color-gray-2: #9B9B9B; 
+$color-gray-3: #4A4A4A; // Dark gray
+
+// Genius messages
+$color-message-genius: #F4F5F8;
+$color-message-pws: $color-purple-2;
+
+// Confirm, Warning, Error
+$color-success: $color-green-1;
+$color-error: $color-red;
+$color-warning: $color-orange;
+
+
+/* Typography */
+
+// Typesetting variables. Edit these!
+$base-font-size: 15; // in pixels. This would result in 15px on desktop
+$base-line-height: 1.5; // how large the line height is as a multiple of font size
+$leading: $base-line-height * 1rem;
+// Rate of growth for headings
+// I actually like this to be slightly smaller then the leading. Makes for tight headings.
+$scale:1.2;
+$font-family: "Lato", "Helvetica Neue", sans-serif;
+
+// Font size variations
+$font-size-normal: $base-font-size *1px; // 15px
+$font-size-large: $base-font-size *1.13333333px; // 17px
+$font-size-small: $base-font-size * .86666667px; // 13px;
+$font-size-extra-small:  $base-font-size * .73333333px; // 11px
+
+// Font Colors
+$font-color: $color-gray-2;
+$font-color-dark: $color-dark;
+$headings-font-color: $color-dark;
+$font-color-reversed: $color-light;
+$font-color-light: dark($color-gray-1);
+$link-color: $color-blue-1;
+
+// Link and Button Colors
+$link-color: $color-blue-1;
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 900;
+
+
+/* Margins and padding */
+//SPACING
+$margin-xs: .66rem; // 10px;
+$margin-s: .8rem; //12px;
+$margin-m: 1rem; // 15px
+$margin-l: 2rem; // 30px
+$margin-xl: 3rem; //45px
+
+$padding-xs: $margin-xs;
+$padding-s: $margin-s;
+$padding-m: $margin-m;
+$padding-l: $margin-l;
+$padding-xl: $margin-xl; //45px
+
+// Header heights 
+$global-header-height: 3.5rem;
+$domain-header-height: 5rem;
+$combined-header-height: 8rem; 
+
+//BORDERS
+$border-style: solid;
+$border-width: 1px;
+$border-width-alt: 2px;
+$border-radius: 4px;
+$border-color: $color-gray-1;
+
+// Grid Settings
+
+// Set the number of columns you want to use on your layout.
+$flexboxgrid-grid-columns: 12 !default;
+// Set the gutter between columns.
+$flexboxgrid-gutter-width: 1rem !default;
+// Set a margin for the container sides.
+$flexboxgrid-outer-margin: 1rem !default;
+// Create or remove breakpoints for your project
+// Syntax:
+// name SIZErem,
+$flexboxgrid-breakpoints:
+  sm 48em 42rem,
+  md 62em 61rem,
+  lg 75em 71rem !default;
+$flexboxgrid-max-width: 42rem !default;
+
+// General Breakpoints
+$break-sm: 42rem;
+$break-md: 62rem;
+$break-lg: 75rem;
+
+// Z-index
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+

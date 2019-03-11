@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over" class="sidenav">
+
+    <header class="heading container-fluid">
+      <div class="row end-xs">
+        <div class="col-xs-4">
+          <button type="button" class="close-button" (click)="sidenav.close()">
+            <span class="material-icons">keyboard_arrow_left</span><span class="text">Close</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <core-sidenav-primary-nav
+      [navItems$]="primaryNavItems$"
+      (onSidenavPrimaryNavItemClick)="sidenav.close()"></core-sidenav-primary-nav>
+
+  </mat-sidenav>
+  <!-- the "main" app content -->
+  <mat-sidenav-content>
+    <!-- authService.isLoggedIn() -->
+    <core-header-secondary-nav
+      [isLoggedIn]="true"
+      [navItems$]="secondaryNavItems$"
+      (onSidenavOpenClick)="sidenav.open()"
+      (onOpenDialogHowItWorksClick)="openDialogHowItWorks()"></core-header-secondary-nav>
+    <main class="page-view-content container-fluid">
+      <router-outlet></router-outlet>
+    </main>
+    <!-- <gofa-oss-footer> would go here if we need one -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,50 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/lib",
+    "target": "es2015",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "declaration": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "types": [],
+    "lib": [
+      "dom",
+      "es2018"
+    ],
+    "paths": {
+
+      "core/*": ["projects/core/src/lib/*"],
+      "@geniusofand/angular-edison-core": [
+        "projects/core/src"
+      ],
+
+      //"@geniusofand/angular-edison-person": [
+      //  "../../../../person/angular-edison/projects/person/src"
+      //],
+
+      "demo-app/*": ["projects/demo-app/src/app/*"],
+      "demo-app-assets/*": ["projects/demo-app/src/assets/*"],
+
+      "core-js/es7/reflect": [
+        "../node_modules/core-js/proposals/reflect-metadata"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableResourceInlining": true
+  },
+  "exclude": [
+    "src/test.ts",
+    "**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,78 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$gofa-color-pallete: (
+    50 : #e1e8ef,
+    100 : #b3c7d7,
+    200 : #80a1bc,
+    300 : #4d7ba1,
+    400 : #275f8d,
+    500 : #014379,
+    600 : #013d71,
+    700 : #013466,
+    800 : #012c5c,
+    900 : #001e49,
+    A100 : #7da4ff,
+    A200 : #4a80ff,
+    A400 : #175cff,
+    A700 : #004bfc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$food-app-primary: mat-palette($gofa-color-pallete);
+$food-app-accent:  mat-palette($gofa-color-pallete);
+
+// The warn palette is optional (defaults to red).
+$food-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$food-app-theme: mat-light-theme($food-app-primary, $food-app-accent, $food-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($food-app-theme);
+
+////////////////////////////
+
+$custom-typography: mat-typography-config(
+  $font-family: 'lato, Helvetica Neue, sans-serif',
+  $headline: mat-typography-level(25px, 32px, 700),
+  $title: mat-typography-level(21px, 30px, 700),
+  $subheading-2: mat-typography-level(21px, 30px, 700),
+  $subheading-1: mat-typography-level(16px, 22px, 700),
+  $body-1: mat-typography-level(15px, 22px, 400),
+  $body-2: mat-typography-level(15px, 22px, 700),
+  $caption: mat-typography-level(13px, 18px, 400)
+);
+
+// Primary Theme
+$custom-primary: mat-palette($mat-blue, 600);
+$custom-accent:  mat-palette($mat-blue, 600);
+
+$custom-theme: mat-light-theme($custom-primary, $custom-accent);
+@include angular-material-theme($custom-theme);
+@include mat-core($custom-typography);
