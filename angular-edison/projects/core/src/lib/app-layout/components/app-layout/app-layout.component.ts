@@ -27,7 +27,7 @@ export class CoreAppLayoutComponent implements OnInit, OnDestroy {
   private readonly destroy$: Subject<boolean> = new Subject<boolean>();
 
   constructor(private readonly _navItemsService: CoreNavItemsService) {
-    this.currentCategoryId$ = new BehaviorSubject<NavCategoryId>(undefined);
+    this.selectedNavCategoryId$ = new BehaviorSubject<NavCategoryId>(undefined);
     this.primaryNavItems$ = new BehaviorSubject<NavItemPrimaryInterface[]>(undefined);
     this.secondaryNavItems$ = new BehaviorSubject<NavItemSecondaryInterface[]>(undefined);
   }
@@ -51,7 +51,7 @@ export class CoreAppLayoutComponent implements OnInit, OnDestroy {
     //     this.updateCurrentCategoryId(this.primaryNavItems$.getValue(), route);
     //
     //     // Update secondary navigation items based on primary navigation
-    //     this.updateSecondaryNavItems(this.currentCategoryId$.getValue());
+    //     this.updateSecondaryNavItems(this.selectedNavCategoryId$.getValue());
     //   });
 
     // Listen for changes to primary navigation items to trigger render.

@@ -11,7 +11,7 @@ export class NavItemsServiceStub implements NavItemsServiceInterface {
 
   constructor(private readonly _alwaysError: boolean = false) {
     this.primaryNavItems$ = this.getPrimaryNavItems();
-    this.secondaryNavItems$ = this.getSecondaryNavItems();
+    this.selectedSecondaryNavItems$ = this.getSecondaryNavItems();
   }
 
   public getPrimaryNavItems(): Observable<NavItemPrimaryInterface[]> {

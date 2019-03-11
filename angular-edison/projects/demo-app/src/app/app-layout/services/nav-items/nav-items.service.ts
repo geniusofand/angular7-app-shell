@@ -19,7 +19,7 @@ export class NavItemsService implements NavItemsServiceInterface {
 
   constructor(private readonly coreNavItemsService: CoreNavItemsService) {
     this.primaryNavItems$ = this.coreNavItemsService.primaryNavItems$;
-    this.secondaryNavItems$ = this.secondaryNavItems$;
+    this.selectedSecondaryNavItems$ = this.secondaryNavItems$;
   }
 
   public loadNavItems(): void {

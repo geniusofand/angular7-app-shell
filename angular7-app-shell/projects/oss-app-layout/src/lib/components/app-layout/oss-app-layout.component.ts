@@ -58,7 +58,7 @@ export class OssAppLayoutComponent implements OnInit, OnDestroy {
     //     this.updateCurrentCategoryId(this.primaryNavItems$.getValue(), route);
     //
     //     // Update secondary navigation items based on primary navigation
-    //     this.updateSecondaryNavItems(this.currentCategoryId$.getValue());
+    //     this.updateSecondaryNavItems(this.selectedNavCategoryId$.getValue());
     //   });
 
     // Listen for changes to primary navigation items to trigger render.
